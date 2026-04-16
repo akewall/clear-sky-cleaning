@@ -6,6 +6,7 @@ import step2Icon from "@/assets/step2-consultation.webp";
 import step3Icon from "@/assets/step3-home.webp";
 import workPhoto1 from "@/assets/work-photo-1.jpg";
 import workPhoto2 from "@/assets/work-photo-2.jpg";
+import workPhotoCenter from "@/assets/work-photo-center.jpg";
 
 const HeroSection = () => {
   return (
