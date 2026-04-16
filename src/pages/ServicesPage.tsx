@@ -8,7 +8,7 @@ const ServicesPage = () => {
     {
       number: "Steg 1",
       title: "Du kontaktar oss",
-      description: "Du ringer eller fyller i vårat formulär och svarar på enkla frågor om dina fönster. Vi baserar vår offert utifrån dina svar.",
+      description: "Du ringer eller fyller i vår priskalkylator och svarar på enkla frågor om dina fönster. Vi baserar vår offert utifrån dina svar.",
       icon: step1Icon,
       buttonText: "Gratis offert här",
       buttonLink: "/gratis-offert",
@@ -16,13 +16,13 @@ const ServicesPage = () => {
     {
       number: "Steg 2",
       title: "Du får ditt pris",
-      description: "Formuläret ni svarat på används för att vi ska kunna skapa en offert. Vi kontaktar dig med offerten och fortsätter till steg tre.\n\nVårt pris startar på 165 kr vilket gäller för hela bottenvåningen exklusive uterum, spröjs och upp till 20 fönster.",
+      description: "Priskalkylatorn ni fyllt i används för att vi ska kunna skapa en offert. Vi kontaktar dig med offerten och fortsätter till steg tre.\n\nVårt pris startar på 165 kr vilket gäller för hela bottenvåningen upp till 20 fönster exklusive uterum och spröjs.",
       icon: step2Icon,
     },
     {
       number: "Steg 3",
       title: "Rena fönster året runt",
-      description: "Du gillar vår offert och vill starta abonnemang. Vi putsar era fönster återkommande var 8de vecka samtidigt som du njuter av rena fönster året om till Sveriges bästa pris.",
+      description: "Du gillar vår offert och vill starta abonnemang. Vi putsar era fönster återkommande var 8e vecka samtidigt som du njuter av rena fönster året om till Sveriges bästa pris.",
       icon: step3Icon,
     },
   ];
@@ -98,14 +98,14 @@ const ServicesPage = () => {
               </h2>
               <p className="text-muted-foreground mb-4">
                 Åkes Fönsterputs är F-skatteregistrerat och erbjuder fönsterputs med RUT-avdrag. 
-                Vi arbetar med abonnemang där vi putsar dina fönster regelbundet var 8:e vecka. 
+                Vi arbetar med abonnemang där vi putsar dina fönster regelbundet var 8e vecka. 
                 Priset anpassas efter varje hus och fastställs därefter som ett fast pris, 
                 så du alltid vet vad det kostar. Priset startar på 165 kr vilket gäller hela 
-                bottenvåningen exklusive uterum, spröjs och upp till 20 fönster.
+                bottenvåningen upp till 20 fönster exklusive uterum och spröjs.
               </p>
               <p className="text-muted-foreground mb-6">
                 Abonnemanget är flexibelt, utan uppsägningstid, och anpassas efter ditt hushåll. 
-                Speciella behov eller eventuella frågor är du varmt välkommen att höra av dig.
+                Vid speciella behov eller eventuella frågor är du varmt välkommen att höra av dig.
               </p>
             </div>
             <div className="animate-slide-in-right">

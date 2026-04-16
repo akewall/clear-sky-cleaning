@@ -62,14 +62,14 @@ const PricingSection = () => {
             </h2>
             <p className="text-muted-foreground mb-4">
               Åkes Fönsterputs är F-skatteregistrerat och erbjuder fönsterputs med RUT-avdrag. 
-              Vi arbetar med abonnemang där vi putsar dina fönster regelbundet var 8:e vecka. 
+              Vi arbetar med abonnemang där vi putsar dina fönster regelbundet var 8e vecka. 
               Priset anpassas efter varje hus och fastställs därefter som ett fast pris, 
               så du alltid vet vad det kostar. Priset startar på 165 kr vilket gäller hela 
-              bottenvåningen exklusive uterum, spröjs och upp till 20 fönster.
+              bottenvåningen upp till 20 fönster exklusive uterum och spröjs.
             </p>
             <p className="text-muted-foreground mb-6">
               Abonnemanget är flexibelt, utan uppsägningstid, och anpassas efter ditt hushåll. 
-              Speciella behov eller eventuella frågor är du varmt välkommen att höra av dig.
+              Vid speciella behov eller eventuella frågor är du varmt välkommen att höra av dig.
             </p>
           </div>
           <div className="animate-slide-in-right">
@@ -135,7 +135,7 @@ const HowItWorksSection = () => {
   const steps = [
     {
       title: "Du kontaktar oss",
-      description: "Du ringer oss eller fyller i vårat formulär som är enkla frågor om dina fönster.",
+      description: "Du ringer oss eller fyller i vår priskalkylator som består av enkla frågor om dina fönster.",
       icon: step1Icon,
     },
     {
@@ -145,7 +145,7 @@ const HowItWorksSection = () => {
     },
     {
       title: "Rena fönster året runt",
-      description: "Du accepterar våran offert och har rena fönster året runt.",
+      description: "Du accepterar vår offert och har rena fönster året runt.",
       icon: step3Icon,
     },
   ];
@@ -207,7 +207,7 @@ const WhoAreWeSection = () => {
           Vilka är vi?
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto mb-4">
-          Vi är ett gäng drivna ungdomar som erbjuder fönsterputs med hög kvalitet, ett leende på läpparna och stor stolthet i vårat arbete.
+          Vi är ett gäng drivna ungdomar som erbjuder fönsterputs med hög kvalitet, ett leende på läpparna och stor stolthet i vårt arbete.
         </p>
         <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
           Vi på Åkes Fönsterputs ger ungdomar chansen att ta sig ut i arbetslivet - samtidigt som dina fönster blir skinande rena.
