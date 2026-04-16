@@ -226,6 +226,7 @@ const WhoAreWeSection = () => {
           </div>
           <div className="aspect-[4/5] rounded-2xl flex items-center justify-center md:mt-8 overflow-hidden">
             <img src={workPhotoCenter} alt="Åkes Fönsterputs medarbetare" className="w-full h-full object-cover rounded-2xl" />
+          </div>
           <div className="hidden md:flex aspect-[4/5] rounded-2xl items-center justify-center md:-mt-8 overflow-hidden">
             <img src={workPhoto2} alt="Åkes Fönsterputs i arbete" className="w-full h-full object-cover rounded-2xl" />
           </div>
