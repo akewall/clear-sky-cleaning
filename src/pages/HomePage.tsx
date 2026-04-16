@@ -6,6 +6,7 @@ import step2Icon from "@/assets/step2-consultation.webp";
 import step3Icon from "@/assets/step3-home.webp";
 import workPhoto1 from "@/assets/work-photo-1.jpg";
 import workPhoto2 from "@/assets/work-photo-2.jpg";
+import workPhotoCenter from "@/assets/work-photo-center.jpg";
 
 const HeroSection = () => {
   return (
@@ -223,7 +224,8 @@ const WhoAreWeSection = () => {
           <div className="hidden md:flex aspect-[4/5] rounded-2xl items-center justify-center md:-mt-8 overflow-hidden">
             <img src={workPhoto1} alt="Åkes Fönsterputs putsar fönster på vitt hus" className="w-full h-full object-cover rounded-2xl" />
           </div>
-          <div className="aspect-[4/5] bg-muted rounded-2xl flex items-center justify-center md:mt-8">
+          <div className="aspect-[4/5] rounded-2xl flex items-center justify-center md:mt-8 overflow-hidden">
+            <img src={workPhotoCenter} alt="Åkes Fönsterputs medarbetare" className="w-full h-full object-cover rounded-2xl" />
           </div>
           <div className="hidden md:flex aspect-[4/5] rounded-2xl items-center justify-center md:-mt-8 overflow-hidden">
             <img src={workPhoto2} alt="Åkes Fönsterputs i arbete" className="w-full h-full object-cover rounded-2xl" />
