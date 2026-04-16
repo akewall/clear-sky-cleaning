@@ -10,7 +10,7 @@ const QuotePage = () => {
             Gratis offert
           </h1>
           <p className="text-muted-foreground max-w-xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Räkna ut ett ungefärligt pris eller fyll i formuläret nedan så återkommer vi inom 2 dagar.
+            Räkna ut ett ungefärligt pris eller fyll i priskalkylatorn nedan så återkommer vi inom 2 dagar.
           </p>
         </div>
       </section>
