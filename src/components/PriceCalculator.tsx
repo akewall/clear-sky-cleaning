@@ -66,7 +66,8 @@ const PriceCalculator = () => {
       total += ufWindows * 15;
     }
 
-    return total;
+    // Round up to nearest 5
+    return Math.ceil(total / 5) * 5;
   };
 
   const handleCalculate = async () => {
@@ -348,11 +349,6 @@ const PriceCalculator = () => {
               <p className="text-sm text-muted-foreground mt-2">
                 *Prisuppskattning. Det exakta priset kan variera.
               </p>
-              {hasMullions === "ja" && mullionType === "fasta" && (
-                <p className="text-sm text-muted-foreground mt-2">
-                  Vid fasta spröjs ger datorn oftast ett för högt pris, var vänlig hör av dig till oss för det korrekta priset.
-                </p>
-              )}
             </div>
 
             <div className="bg-section-bg rounded-xl p-6 text-center space-y-4">
