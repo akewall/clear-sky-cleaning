@@ -62,14 +62,17 @@ const PricingSection = () => {
               Skinande rena fönster till Sveriges lägsta pris
             </h2>
             <p className="text-muted-foreground mb-4">
-              Åkes Fönsterputs är F-skatteregistrerat och erbjuder fönsterputs med RUT-avdrag. 
-              Vi arbetar med abonnemang där vi putsar dina fönster regelbundet var 8e vecka. 
-              Priset anpassas efter varje hus och fastställs därefter som ett fast pris, 
-              så du alltid vet vad det kostar. Priset startar på 165 kr vilket gäller hela 
+              Åkes Fönsterputs är F-skatteregistrerat och erbjuder fönsterputs med RUT-avdrag.
+              Vi främst arbetar med abonnemang där vi putsar dina fönster regelbundet var 8e vecka.
+              Priset anpassas efter varje hus och fastställs därefter som ett fast pris,
+              så du alltid vet vad det kostar. Priset startar på 165 kr vilket gäller hela
               bottenvåningen upp till 20 fönster exklusive uterum och spröjs.
             </p>
+            <p className="text-muted-foreground mb-4">
+              Vi erbjuder även engångsputsningar, invändig och utvändig putsning samt flyttputsning.
+            </p>
             <p className="text-muted-foreground mb-6">
-              Abonnemanget är flexibelt, utan uppsägningstid, och anpassas efter ditt hushåll. 
+              Abonnemanget är flexibelt, utan uppsägningstid, och anpassas efter ditt hushåll.
               Vid speciella behov eller eventuella frågor är du varmt välkommen att höra av dig.
             </p>
           </div>
