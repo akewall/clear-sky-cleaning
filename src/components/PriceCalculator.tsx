@@ -34,9 +34,9 @@ const PriceCalculator = () => {
     const gfWindows = parseInt(groundFloorWindows) || 0;
 
     if (hasMullions === "ja" && mullionType === "fasta") {
-      // Fixed mullions: panes / 20 * 165
-      const panes = parseInt(fixedMullionPanes) || 0;
-      total += (panes / 20) * 165;
+      // Fixed mullions: panes-per-window * windows / 20 * 165
+      const panesPerWindow = parseInt(fixedMullionPanes) || 0;
+      total += ((panesPerWindow * gfWindows) / 20) * 165;
     } else {
       // Normal ground floor price
       total += 165;
@@ -44,9 +44,9 @@ const PriceCalculator = () => {
         total += (gfWindows - 20) * 10;
       }
 
-      // Removable mullions: +100 kr
+      // Removable mullions: +75 kr
       if (hasMullions === "ja" && mullionType === "avtagbara") {
-        total += 100;
+        total += 75;
       }
     }
 
@@ -265,7 +265,7 @@ const PriceCalculator = () => {
               {mullionType === "fasta" && (
                 <div className="ml-6 mt-2 space-y-2">
                   <Label htmlFor="panes">
-                    Totalt antal mindre rutor (alla fönster)
+                    Antal rutor varje fönster är uppdelat i
                   </Label>
                   <Input
                     id="panes"
@@ -278,9 +278,6 @@ const PriceCalculator = () => {
                       setShowResult(false);
                     }}
                   />
-                  <p className="text-sm text-muted-foreground">
-                    Räkna ihop alla små rutor som fönstren är uppdelade i.
-                  </p>
                 </div>
               )}
             </div>
