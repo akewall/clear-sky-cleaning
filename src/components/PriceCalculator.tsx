@@ -265,7 +265,7 @@ const PriceCalculator = () => {
               {mullionType === "fasta" && (
                 <div className="ml-6 mt-2 space-y-2">
                   <Label htmlFor="panes">
-                    Totalt antal mindre rutor (alla fönster)
+                    Antal rutor varje fönster är uppdelat i
                   </Label>
                   <Input
                     id="panes"
@@ -278,9 +278,6 @@ const PriceCalculator = () => {
                       setShowResult(false);
                     }}
                   />
-                  <p className="text-sm text-muted-foreground">
-                    Räkna ihop alla små rutor som fönstren är uppdelade i.
-                  </p>
                 </div>
               )}
             </div>
