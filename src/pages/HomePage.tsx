@@ -96,7 +96,7 @@ const WhyUsSection = () => {
   const reasons = [
     {
       title: "Lokalt företag",
-      description: "Vi är ett lokalt företag i Ljunghusen, Höllviken, Vellinge, Skanör/Falsterbo och Gislöv som bryr oss om våra kunder.",
+      description: "Vi är ett lokalt företag i Ljunghusen, Höllviken, Vellinge, Skanör/Falsterbo, Rängs Sands och Gislöv som bryr oss om våra kunder.",
     },
     {
       title: "RUT-avdrag",
