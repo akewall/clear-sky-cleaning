@@ -20,7 +20,6 @@ const PriceCalculator = () => {
   const [conservatoryWindows, setConservatoryWindows] = useState("");
   const [hasMullions, setHasMullions] = useState<string>("");
   const [mullionType, setMullionType] = useState<string>("");
-  const [fixedMullionPanes, setFixedMullionPanes] = useState("");
   const [hasUpperFloor, setHasUpperFloor] = useState<string>("");
   const [upperFloorWindows, setUpperFloorWindows] = useState("");
   const [showResult, setShowResult] = useState(false);
@@ -81,7 +80,7 @@ const PriceCalculator = () => {
       `Bottenvåningsfönster: ${groundFloorWindows}`,
       hasConservatory === "ja" ? `Uterum: Ja (${conservatoryWindows} fönster)` : "Uterum: Nej",
       hasMullions === "ja"
-        ? `Spröjs: ${mullionType === "fasta" ? `Fasta (${fixedMullionPanes} rutor)` : "Avtagbara"}`
+        ? `Spröjs: ${mullionType === "fasta" ? "Fasta" : "Avtagbara"}`
         : "Spröjs: Nej",
       hasUpperFloor === "ja" ? `Ovanvåning: Ja (${upperFloorWindows} fönster)` : "Ovanvåning: Nej",
     ].join("\n");
@@ -111,7 +110,6 @@ const PriceCalculator = () => {
     (hasConservatory === "nej" || conservatoryWindows) &&
     hasMullions &&
     (hasMullions === "nej" || mullionType) &&
-    (hasMullions === "nej" || mullionType !== "fasta" || fixedMullionPanes) &&
     hasUpperFloor &&
     (hasUpperFloor === "nej" || upperFloorWindows);
 
