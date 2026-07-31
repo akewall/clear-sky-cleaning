@@ -33,21 +33,23 @@ const PriceCalculator = () => {
     // Base price ground floor: up to 20 windows = 165 kr
     const gfWindows = parseInt(groundFloorWindows) || 0;
 
-    if (hasMullions === "ja" && mullionType === "fasta") {
-      // Fixed mullions: panes-per-window * windows / 20 * 165
-      const panesPerWindow = parseInt(fixedMullionPanes) || 0;
-      total += ((panesPerWindow * gfWindows) / 20) * 165;
-    } else {
-      // Normal ground floor price
-      total += 165;
-      if (gfWindows > 20) {
-        total += (gfWindows - 20) * 10;
-      }
+    // Normal ground floor price
+    total += 165;
+    if (gfWindows > 20) {
+      total += (gfWindows - 20) * 10;
+    }
 
-      // Removable mullions: +75 kr
-      if (hasMullions === "ja" && mullionType === "avtagbara") {
-        total += 75;
+    if (hasMullions === "ja" && mullionType === "fasta") {
+      // Fixed mullions: 100 kr base up to 20 windows, then 5 kr per extra window
+      total += 100;
+      if (gfWindows > 20) {
+        total += (gfWindows - 20) * 5;
       }
+    }
+
+    // Removable mullions: +75 kr
+    if (hasMullions === "ja" && mullionType === "avtagbara") {
+      total += 75;
     }
 
     // Conservatory
