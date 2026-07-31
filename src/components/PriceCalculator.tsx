@@ -20,7 +20,6 @@ const PriceCalculator = () => {
   const [conservatoryWindows, setConservatoryWindows] = useState("");
   const [hasMullions, setHasMullions] = useState<string>("");
   const [mullionType, setMullionType] = useState<string>("");
-  const [fixedMullionPanes, setFixedMullionPanes] = useState("");
   const [hasUpperFloor, setHasUpperFloor] = useState<string>("");
   const [upperFloorWindows, setUpperFloorWindows] = useState("");
   const [showResult, setShowResult] = useState(false);
@@ -33,21 +32,23 @@ const PriceCalculator = () => {
     // Base price ground floor: up to 20 windows = 165 kr
     const gfWindows = parseInt(groundFloorWindows) || 0;
 
-    if (hasMullions === "ja" && mullionType === "fasta") {
-      // Fixed mullions: panes-per-window * windows / 20 * 165
-      const panesPerWindow = parseInt(fixedMullionPanes) || 0;
-      total += ((panesPerWindow * gfWindows) / 20) * 165;
-    } else {
-      // Normal ground floor price
-      total += 165;
-      if (gfWindows > 20) {
-        total += (gfWindows - 20) * 10;
-      }
+    // Normal ground floor price
+    total += 165;
+    if (gfWindows > 20) {
+      total += (gfWindows - 20) * 10;
+    }
 
-      // Removable mullions: +75 kr
-      if (hasMullions === "ja" && mullionType === "avtagbara") {
-        total += 75;
+    if (hasMullions === "ja" && mullionType === "fasta") {
+      // Fixed mullions: 100 kr base up to 20 windows, then 5 kr per extra window
+      total += 100;
+      if (gfWindows > 20) {
+        total += (gfWindows - 20) * 5;
       }
+    }
+
+    // Removable mullions: +75 kr
+    if (hasMullions === "ja" && mullionType === "avtagbara") {
+      total += 75;
     }
 
     // Conservatory
@@ -79,7 +80,7 @@ const PriceCalculator = () => {
       `Bottenvåningsfönster: ${groundFloorWindows}`,
       hasConservatory === "ja" ? `Uterum: Ja (${conservatoryWindows} fönster)` : "Uterum: Nej",
       hasMullions === "ja"
-        ? `Spröjs: ${mullionType === "fasta" ? `Fasta (${fixedMullionPanes} rutor)` : "Avtagbara"}`
+        ? `Spröjs: ${mullionType === "fasta" ? "Fasta" : "Avtagbara"}`
         : "Spröjs: Nej",
       hasUpperFloor === "ja" ? `Ovanvåning: Ja (${upperFloorWindows} fönster)` : "Ovanvåning: Nej",
     ].join("\n");
@@ -109,7 +110,6 @@ const PriceCalculator = () => {
     (hasConservatory === "nej" || conservatoryWindows) &&
     hasMullions &&
     (hasMullions === "nej" || mullionType) &&
-    (hasMullions === "nej" || mullionType !== "fasta" || fixedMullionPanes) &&
     hasUpperFloor &&
     (hasUpperFloor === "nej" || upperFloorWindows);
 
@@ -228,7 +228,6 @@ const PriceCalculator = () => {
               setHasMullions(v);
               if (v === "nej") {
                 setMullionType("");
-                setFixedMullionPanes("");
               }
               setShowResult(false);
             }}
@@ -249,7 +248,6 @@ const PriceCalculator = () => {
                 value={mullionType}
                 onValueChange={(v) => {
                   setMullionType(v);
-                  if (v !== "fasta") setFixedMullionPanes("");
                   setShowResult(false);
                 }}
               >
@@ -262,24 +260,6 @@ const PriceCalculator = () => {
                   <Label htmlFor="mul-removable">Avtagbara</Label>
                 </div>
               </RadioGroup>
-              {mullionType === "fasta" && (
-                <div className="ml-6 mt-2 space-y-2">
-                  <Label htmlFor="panes">
-                    Antal rutor varje fönster är uppdelat i
-                  </Label>
-                  <Input
-                    id="panes"
-                    type="number"
-                    min="1"
-                    placeholder="Ange antal rutor"
-                    value={fixedMullionPanes}
-                    onChange={(e) => {
-                      setFixedMullionPanes(e.target.value);
-                      setShowResult(false);
-                    }}
-                  />
-                </div>
-              )}
             </div>
           )}
         </div>
