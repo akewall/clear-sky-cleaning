@@ -228,7 +228,6 @@ const PriceCalculator = () => {
               setHasMullions(v);
               if (v === "nej") {
                 setMullionType("");
-                setFixedMullionPanes("");
               }
               setShowResult(false);
             }}
@@ -249,7 +248,6 @@ const PriceCalculator = () => {
                 value={mullionType}
                 onValueChange={(v) => {
                   setMullionType(v);
-                  if (v !== "fasta") setFixedMullionPanes("");
                   setShowResult(false);
                 }}
               >
@@ -262,24 +260,6 @@ const PriceCalculator = () => {
                   <Label htmlFor="mul-removable">Avtagbara</Label>
                 </div>
               </RadioGroup>
-              {mullionType === "fasta" && (
-                <div className="ml-6 mt-2 space-y-2">
-                  <Label htmlFor="panes">
-                    Antal rutor varje fönster är uppdelat i
-                  </Label>
-                  <Input
-                    id="panes"
-                    type="number"
-                    min="1"
-                    placeholder="Ange antal rutor"
-                    value={fixedMullionPanes}
-                    onChange={(e) => {
-                      setFixedMullionPanes(e.target.value);
-                      setShowResult(false);
-                    }}
-                  />
-                </div>
-              )}
             </div>
           )}
         </div>
