@@ -58,7 +58,8 @@ const ContactPage = () => {
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-4">Företagsinformation</h3>
                 <ul className="space-y-3 text-muted-foreground">
-                  <li>Åkes Fönsterputs</li>
+                  <li>Åkes Fönsterputs AB</li>
+                  <li>Org.nr: 559597-9864</li>
                   <li>Vi är F-skattsregistrerade</li>
                   <li>RUT-avdrag godkänt</li>
                 </ul>

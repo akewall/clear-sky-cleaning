@@ -62,7 +62,7 @@ const PricingSection = () => {
               Skinande rena fönster till Sveriges lägsta pris
             </h2>
             <p className="text-muted-foreground mb-4">
-              Åkes Fönsterputs är F-skatteregistrerat och erbjuder fönsterputs med RUT-avdrag.
+              Åkes Fönsterputs AB är F-skatteregistrerat och erbjuder fönsterputs med RUT-avdrag.
               Vi arbetar främst med abonnemang där vi putsar dina fönster regelbundet var 8e vecka.
               Priset anpassas efter varje hus och fastställs därefter som ett fast pris,
               så du alltid vet vad det kostar. Priset startar på 165 kr vilket gäller hela
@@ -96,7 +96,7 @@ const WhyUsSection = () => {
   const reasons = [
     {
       title: "Lokalt företag",
-      description: "Vi är ett lokalt företag i Ljunghusen, Höllviken, Vellinge, Skanör/Falsterbo, Rängs Sands och Gislöv som bryr oss om våra kunder.",
+      description: "Vi är ett lokalt företag i Ljunghusen, Höllviken, Vellinge, Skanör/Falsterbo, Rängs Sands, Gislöv och Trelleborg som bryr oss om våra kunder.",
     },
     {
       title: "RUT-avdrag",
@@ -214,7 +214,7 @@ const WhoAreWeSection = () => {
           Vi är ett gäng drivna ungdomar som erbjuder fönsterputs med hög kvalitet, ett leende på läpparna och stor stolthet i vårt arbete.
         </p>
         <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-          Vi på Åkes Fönsterputs ger ungdomar chansen att ta sig ut i arbetslivet - samtidigt som dina fönster blir skinande rena.
+          Vi på Åkes Fönsterputs AB ger ungdomar chansen att ta sig ut i arbetslivet - samtidigt som dina fönster blir skinande rena.
         </p>
         <Link
           to="/om-oss"

@@ -7,7 +7,7 @@ const AboutPage = () => {
       <section className="bg-section-bg py-16 md:py-24">
         <div className="container-custom px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in">
-            Om Åkes Fönsterputs
+            Om Åkes Fönsterputs AB
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Unga entreprenörer med passion för skinande rena fönster
