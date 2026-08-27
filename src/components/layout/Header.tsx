@@ -21,9 +21,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20 px-4">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Åkes Fönsterputs" className="h-12 md:h-14 w-auto" />
+            <img src={logo} alt="Åkes Fönsterputs AB" className="h-12 md:h-14 w-auto" />
             <span className="hidden sm:block font-bold text-lg text-foreground">
-              Åkes Fönsterputs
+              Åkes Fönsterputs AB
             </span>
           </Link>
 

@@ -6,12 +6,12 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container-custom px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
           {/* Logo */}
           <div>
             <Link to="/" className="flex items-center gap-2 font-bold mb-4">
-              <img src={logo} alt="Åkes Fönsterputs" className="h-8 w-auto" />
-              <span className="text-xl">Åkes Fönsterputs</span>
+              <img src={logo} alt="Åkes Fönsterputs AB" className="h-8 w-auto" />
+              <span className="text-xl">Åkes Fönsterputs AB</span>
             </Link>
           </div>
 
@@ -34,6 +34,23 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Company Info */}
+          <div>
+            <h4 className="font-bold mb-4">Företagsinformation</h4>
+            <ul className="space-y-3 text-sm text-primary-foreground/80">
+              <li className="flex items-start gap-2">
+                <MapPin size={16} className="mt-0.5 flex-shrink-0" />
+                <span>
+                  Rödhakegatan 18<br />
+                  235 38 Vellinge
+                </span>
+              </li>
+              <li>
+                <span>Org.nr: 559597-9864</span>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact Info */}
           <div>
             <h4 className="font-bold mb-4">Kontakt</h4>
@@ -50,19 +67,12 @@ const Footer = () => {
                   Mejla oss
                 </a>
               </li>
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="mt-0.5 flex-shrink-0" />
-                <span>
-                  Rödhakegatan 18<br />
-                  235 38 Vellinge
-                </span>
-              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>© {new Date().getFullYear()} Åkes Fönsterputs. Alla rättigheter förbehållna.</p>
+          <p>© {new Date().getFullYear()} Åkes Fönsterputs AB. Alla rättigheter förbehållna.</p>
         </div>
       </div>
     </footer>
