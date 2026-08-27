@@ -15,6 +15,23 @@ const Footer = () => {
             </Link>
           </div>
 
+          {/* Company Info */}
+          <div>
+            <h4 className="font-bold mb-4">Företagsinformation</h4>
+            <ul className="space-y-3 text-sm text-primary-foreground/80">
+              <li className="flex items-start gap-2">
+                <MapPin size={16} className="mt-0.5 flex-shrink-0" />
+                <span>
+                  Rödhakegatan 18<br />
+                  235 38 Vellinge
+                </span>
+              </li>
+              <li>
+                <span>Org.nr: 559597-9864</span>
+              </li>
+            </ul>
+          </div>
+
           {/* Quick Links */}
           <div>
             <h4 className="font-bold mb-4">Snabblänkar</h4>
@@ -30,23 +47,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/kontakt" className="hover:text-primary-foreground transition-colors">Kontakt</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company Info */}
-          <div>
-            <h4 className="font-bold mb-4">Företagsinformation</h4>
-            <ul className="space-y-3 text-sm text-primary-foreground/80">
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="mt-0.5 flex-shrink-0" />
-                <span>
-                  Rödhakegatan 18<br />
-                  235 38 Vellinge
-                </span>
-              </li>
-              <li>
-                <span>Org.nr: 559597-9864</span>
               </li>
             </ul>
           </div>
