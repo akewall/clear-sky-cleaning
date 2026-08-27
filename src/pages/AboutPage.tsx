@@ -31,10 +31,10 @@ const AboutPage = () => {
                 Vår historia
               </h2>
               <p className="text-muted-foreground mb-4">
-                Åkes Fönsterputs är ett ungdomsdrivet företag med en enkel idé: att leverera riktigt bra fönsterputs med hög kvalitet, pålitlig service och ett personligt bemötande.
+                Åkes Fönsterputs AB är ett ungdomsdrivet företag med en enkel idé: att leverera riktigt bra fönsterputs med hög kvalitet, pålitlig service och ett personligt bemötande.
               </p>
               <p className="text-muted-foreground mb-4">
-                Idag hjälper vi strax över 180 kunder i Ljunghusen, Höllviken, Vellinge, Skanör/Falsterbo, Rängs Sands och Gislöv att få skinande rena fönster – utan krångel. Vårt team består av drivna ungdomar som tar ansvar, arbetar noggrant och alltid strävar efter att överträffa kundens förväntningar.
+                Idag hjälper vi strax över 180 kunder i Ljunghusen, Höllviken, Vellinge, Skanör/Falsterbo, Rängs Sands, Gislöv och Trelleborg att få skinande rena fönster – utan krångel. Vårt team består av drivna ungdomar som tar ansvar, arbetar noggrant och alltid strävar efter att överträffa kundens förväntningar.
               </p>
               <p className="text-muted-foreground mb-4">
                 För oss handlar det inte bara om rena fönster, utan om att skapa förtroende. När du bokar oss ska du känna dig trygg med att jobbet blir gjort ordentligt, i tid och med ett resultat du är nöjd med.
