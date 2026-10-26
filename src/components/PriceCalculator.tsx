@@ -29,11 +29,11 @@ const PriceCalculator = () => {
   const calculatePrice = () => {
     let total = 0;
 
-    // Base price ground floor: up to 20 windows = 165 kr
+    // Base price ground floor: up to 20 windows = 175 kr
     const gfWindows = parseInt(groundFloorWindows) || 0;
 
     // Normal ground floor price
-    total += 165;
+    total += 175;
     if (gfWindows > 20) {
       total += (gfWindows - 20) * 10;
     }
