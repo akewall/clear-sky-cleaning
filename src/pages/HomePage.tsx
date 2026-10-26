@@ -65,7 +65,7 @@ const PricingSection = () => {
               Åkes Fönsterputs AB är F-skatteregistrerat och erbjuder fönsterputs med RUT-avdrag.
               Vi arbetar främst med abonnemang där vi putsar dina fönster regelbundet var 8e vecka.
               Priset anpassas efter varje hus och fastställs därefter som ett fast pris,
-              så du alltid vet vad det kostar. Priset startar på 165 kr vilket gäller hela
+              så du alltid vet vad det kostar. Priset startar på 175 kr vilket gäller hela
               bottenvåningen upp till 20 fönster exklusive uterum och spröjs.
             </p>
             <p className="text-muted-foreground mb-4">
@@ -79,7 +79,7 @@ const PricingSection = () => {
           <div className="animate-slide-in-right">
             <div className="bg-card rounded-2xl shadow-xl p-8 text-center">
               <p className="text-muted-foreground text-lg mb-2">Från</p>
-              <p className="text-6xl md:text-7xl font-bold text-primary mb-2">165 kr</p>
+              <p className="text-6xl md:text-7xl font-bold text-primary mb-2">175 kr</p>
               <p className="text-muted-foreground mb-6">efter RUT</p>
               <Link to="/gratis-offert" className="btn-primary inline-block w-full text-lg">
                 Gratis offert här!

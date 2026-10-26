@@ -7,6 +7,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Phone, Mail, Calculator, Loader2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { useToast } from "@/hooks/use-toast";
+import { calculateQuote } from "@/lib/price";
 
 const EMAILJS_PUBLIC_KEY = "_9iNtCysgrSxtsjDZ";
 const EMAILJS_SERVICE_ID = "service_tn6u3iq";
@@ -26,50 +27,17 @@ const PriceCalculator = () => {
   const [isSending, setIsSending] = useState(false);
   const { toast } = useToast();
 
-  const calculatePrice = () => {
-    let total = 0;
-
-    // Base price ground floor: up to 20 windows = 165 kr
-    const gfWindows = parseInt(groundFloorWindows) || 0;
-
-    // Normal ground floor price
-    total += 165;
-    if (gfWindows > 20) {
-      total += (gfWindows - 20) * 10;
-    }
-
-    if (hasMullions === "ja" && mullionType === "fasta") {
-      // Fixed mullions: 100 kr base up to 20 windows, then 5 kr per extra window
-      total += 100;
-      if (gfWindows > 20) {
-        total += (gfWindows - 20) * 5;
-      }
-    }
-
-    // Removable mullions: +75 kr
-    if (hasMullions === "ja" && mullionType === "avtagbara") {
-      total += 75;
-    }
-
-    // Conservatory
-    if (hasConservatory === "ja") {
-      const cWindows = parseInt(conservatoryWindows) || 0;
-      if (cWindows <= 10) {
-        total += 50;
-      } else {
-        total += 75;
-      }
-    }
-
-    // Upper floor: 15 kr per window
-    if (hasUpperFloor === "ja") {
-      const ufWindows = parseInt(upperFloorWindows) || 0;
-      total += ufWindows * 15;
-    }
-
-    // Round up to nearest 5
-    return Math.ceil(total / 5) * 5;
-  };
+  const calculatePrice = () =>
+    calculateQuote({
+      groundFloorWindows: parseInt(groundFloorWindows) || 0,
+      hasConservatory: hasConservatory === "ja",
+      conservatoryWindows: parseInt(conservatoryWindows) || 0,
+      hasMullions: hasMullions === "ja",
+      mullionType:
+        mullionType === "fasta" || mullionType === "avtagbara" ? mullionType : "",
+      hasUpperFloor: hasUpperFloor === "ja",
+      upperFloorWindows: parseInt(upperFloorWindows) || 0,
+    });
 
   const handleCalculate = async () => {
     setIsSending(true);
