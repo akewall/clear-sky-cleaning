@@ -18,12 +18,9 @@ export function calculateQuote(i: QuoteInputs): number {
     total += (i.groundFloorWindows - 20) * 10;
   }
 
-  // Fixed mullions: 100 kr base up to 20 windows, then 5 kr per extra window
+  // Fixed mullions: flat 100 kr
   if (i.hasMullions && i.mullionType === "fasta") {
     total += 100;
-    if (i.groundFloorWindows > 20) {
-      total += (i.groundFloorWindows - 20) * 5;
-    }
   }
 
   // Removable mullions: +75 kr
@@ -31,9 +28,9 @@ export function calculateQuote(i: QuoteInputs): number {
     total += 75;
   }
 
-  // Conservatory: +50 kr up to 10 windows, otherwise +75 kr
+  // Conservatory: +50 kr for 1-9 windows, +75 kr for 10 or more
   if (i.hasConservatory) {
-    total += i.conservatoryWindows <= 10 ? 50 : 75;
+    total += i.conservatoryWindows < 10 ? 50 : 75;
   }
 
   // Upper floor: +15 kr per window
