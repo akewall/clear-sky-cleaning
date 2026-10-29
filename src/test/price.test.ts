@@ -21,7 +21,7 @@ describe("prisregler", () => {
     expect(calculateQuote({ ...base, groundFloorWindows: 25 })).toBe(225);
   });
 
-  it("fasta spröjs: 100 kr upp till 20 fönster + 5 kr per fönster över 20", () => {
+  it("fasta spröjs: fast tillägg 100 kr oavsett antal fönster", () => {
     expect(
       calculateQuote({
         ...base,
@@ -29,7 +29,7 @@ describe("prisregler", () => {
         hasMullions: true,
         mullionType: "fasta",
       })
-    ).toBe(350);
+    ).toBe(325);
   });
 
   it("avtagbara spröjs: +75 kr", () => {
@@ -43,13 +43,13 @@ describe("prisregler", () => {
     ).toBe(250);
   });
 
-  it("uterum: +50 kr vid högst 10 fönster, annars +75 kr", () => {
+  it("uterum: +50 kr vid 1-9 fönster, +75 kr vid 10 eller fler", () => {
     expect(
       calculateQuote({
         ...base,
         groundFloorWindows: 10,
         hasConservatory: true,
-        conservatoryWindows: 10,
+        conservatoryWindows: 9,
       })
     ).toBe(225);
     expect(
@@ -57,7 +57,7 @@ describe("prisregler", () => {
         ...base,
         groundFloorWindows: 10,
         hasConservatory: true,
-        conservatoryWindows: 12,
+        conservatoryWindows: 10,
       })
     ).toBe(250);
   });
